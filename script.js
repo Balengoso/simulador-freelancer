@@ -1,6 +1,3 @@
-// TESTE: verifica se o JS está carregando
-console.log("JS carregado");
-
 // Seleciona todos os checkboxes
 const botoesAdicionar = document.querySelectorAll('.adicionar');
 console.log("Checkbox encontrados:", botoesAdicionar.length);
