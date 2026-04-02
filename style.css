@@ -11,21 +11,33 @@ header {
     background-color: #9ed3c1; /* cor de fundo */
     color: #fff; /* cor do texto */
     text-align: center; /* centraliza texto */
-    padding: 1rem 0; /* espaço em cima e embaixo */
+    padding: 0.4rem 0; /* espaço em cima e embaixo */
 }
 
 /* Banner com imagem de fundo */
 .banner {
-    background-image: url('imagens/banner-legal.webp'); /* imagem de fundo */
-    background-size: cover; /* faz a imagem cobrir tudo */
-    background-position: center; /* centraliza a imagem */
-    height: 300px; /* altura do banner */
-    display: flex; /* ativa flexbox */
-    align-items: center; /* centraliza vertical */
-    justify-content: center; /* centraliza horizontal */
-    text-align: center; /* centraliza texto */
-    color: black; /* cor do texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* sombra no texto */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+
+    position: fixed; /* FIXA NO TOPO */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    transition: all 0.3s ease; /* ANIMAÇÃO */
+}
+
+.banner.pequeno {
+    height: 120px;
 }
 
 /* Conteúdo dentro do banner */
@@ -47,23 +59,23 @@ header {
 
 /* Links do menu */
 nav a {
-    color: #333; /* cor do texto */
+    color: white; /* cor do texto */
     text-decoration: none; /* remove sublinhado */
     margin: 0.1rem; /* espaço entre links */
     padding: 0.5rem 1rem; /* tamanho do botão */
     border-radius: 8px; /* borda arredondada */
-    background-color: white; /* fundo branco */
+    background-color: rgb(0, 128, 100); /* fundo branco */
 }
 
 /* Efeito ao passar o mouse */
 nav a:hover {
-    background-color: wheat; /* muda cor ao passar mouse */
+    background-color: rgb(44, 71, 66); /* muda cor ao passar mouse */
 }
 
 /* Área principal do site */
 main {
-    width: 80%; /* largura da página */
-    margin: 2rem auto; /* centraliza horizontalmente */
+    width: 80%;
+    margin: 320px auto 2rem auto; /* espaço pro banner fixo */
 }
 
 /* Cada categoria (serviços, etc) */
@@ -141,8 +153,12 @@ main {
     border: none; /* sem borda */
     color: white; /* texto branco */
     padding: 0.5rem 1rem; /* tamanho */
-    border-radius: 4px; /* arredondado */
+    border-radius: 40px; /* arredondado */
     cursor: pointer; /* mãozinha */
+}
+
+#finalizar-pedido:hover {
+    background-color: rgb(44, 71, 66);
 }
 
 /* Seção de contato */
@@ -162,11 +178,15 @@ main {
     margin: 0.5rem; /* espaço entre botões */
 }
 
+.redes-sociais a:hover {
+    background-color: rgb(44, 71, 66);
+}
+
 /* Rodapé */
 footer {
     text-align: center; /* centraliza texto */
     padding: 1rem 0; /* espaço interno */
-    background-color: #333; /* fundo escuro */
+    background-color: rgb(44, 71, 66); /* fundo escuro */
     color: white; /* texto branco */
 }
 
@@ -193,4 +213,25 @@ footer {
 #titulo2 {
     width: 100%;
     text-align: center;
+}
+
+/* Ajustes quando o banner encolhe */
+.banner.pequeno h1 {
+    font-size: 1.5rem;
+}
+
+.banner.pequeno p {
+    font-size: 0.8rem;
+}
+
+/* suaviza a transição do texto */
+.banner h1,
+.banner p {
+    transition: all 0.3s ease;
+}
+
+/* opcional: deixa o menu mais compacto */
+.banner.pequeno nav a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
 }

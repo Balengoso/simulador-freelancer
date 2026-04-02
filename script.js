@@ -63,3 +63,13 @@ botaoFinalizarPedido.addEventListener("click", () => {
     total = 0;
     totalElemento.textContent = `Total: R$ ${total.toFixed(2)}`;
 });
+
+window.addEventListener("scroll", () => {
+    const banner = document.querySelector(".banner");
+
+    if (window.scrollY > 50) {
+        banner.classList.add("pequeno");
+    } else {
+        banner.classList.remove("pequeno");
+    }
+});
