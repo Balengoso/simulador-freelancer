@@ -1,0 +1,196 @@
+/* Estilo geral da página inteira */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do site */
+    margin: 0; /* remove margem padrão do navegador */
+    padding: 0; /* remove espaçamento interno padrão */
+    background-color: rgb(247, 255, 253); /* cor de fundo da página */
+}
+
+/* Cabeçalho (barra de cima) */
+header {
+    background-color: #9ed3c1; /* cor de fundo */
+    color: #fff; /* cor do texto */
+    text-align: center; /* centraliza texto */
+    padding: 1rem 0; /* espaço em cima e embaixo */
+}
+
+/* Banner com imagem de fundo */
+.banner {
+    background-image: url('imagens/banner-legal.webp'); /* imagem de fundo */
+    background-size: cover; /* faz a imagem cobrir tudo */
+    background-position: center; /* centraliza a imagem */
+    height: 300px; /* altura do banner */
+    display: flex; /* ativa flexbox */
+    align-items: center; /* centraliza vertical */
+    justify-content: center; /* centraliza horizontal */
+    text-align: center; /* centraliza texto */
+    color: black; /* cor do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* sombra no texto */
+}
+
+/* Conteúdo dentro do banner */
+.banner-content {
+    width: 80%; /* largura do conteúdo dentro do banner */
+}
+
+/* Título principal do banner */
+.banner h1 {
+    font-size: 3rem; /* tamanho grande */
+    margin-bottom: 1rem; /* espaço abaixo */
+}
+
+/* Texto abaixo do título */
+.banner p {
+    font-size: 1.2rem; /* tamanho médio */
+    margin-bottom: 1rem; /* espaço abaixo */
+}
+
+/* Links do menu */
+nav a {
+    color: #333; /* cor do texto */
+    text-decoration: none; /* remove sublinhado */
+    margin: 0.1rem; /* espaço entre links */
+    padding: 0.5rem 1rem; /* tamanho do botão */
+    border-radius: 8px; /* borda arredondada */
+    background-color: white; /* fundo branco */
+}
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+    background-color: wheat; /* muda cor ao passar mouse */
+}
+
+/* Área principal do site */
+main {
+    width: 80%; /* largura da página */
+    margin: 2rem auto; /* centraliza horizontalmente */
+}
+
+/* Cada categoria (serviços, etc) */
+.categoria {
+    margin-bottom: 2rem; /* espaço entre seções */
+}
+
+/* Define largura total */
+.categoria {
+    width: 100%;
+}
+
+/* Título da categoria */
+.categoria h2 {
+    width: 100%; /* ocupa toda a linha */
+    text-align: center; /* centraliza texto */
+    margin-bottom: 20px; /* espaço abaixo */
+}
+
+/* Card de cada serviço */
+.produto {
+    background-color: #aee0d8; /* fundo branco */
+    border-radius: 60px; /* borda arredondada */
+    padding: 1rem; /* espaço interno */
+    margin-bottom: 1rem; /* espaço entre cards */
+    align-items: center; /* centraliza horizontal */
+    text-align: center; /* centraliza texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagem do produto */
+.produto img {
+    max-width: 100%; /* não passa do tamanho do card */
+    height: auto; /* mantém proporção */
+    border-radius: 8px; /* borda arredondada */
+    margin-bottom: 1rem; /* espaço abaixo */
+}
+
+/* Preço */
+.preco {
+    font-weight: bold; /* deixa em negrito */
+    color: #374945; /* cor do preço */
+    margin-bottom: 1rem; /* espaço abaixo */
+}
+
+/* Check adicionar */
+.adicionar {
+
+    cursor: pointer; /* vira mãozinha */
+    transform: scale(1.5);
+    transform-origin: top left;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Área de pedidos/orçamento */
+#pedidos {
+    background-color: rgb(187, 216, 202); /* fundo verde claro */
+    padding: 1rem; /* espaço interno */
+    border-radius: 50px; /* borda arredondada */
+}
+
+/* Lista de pedidos */
+#lista-pedido {
+    list-style: none;
+    padding: 0; /* remove espaço interno */
+}
+
+/* Botão finalizar */
+#finalizar-pedido {
+    background-color: rgb(0, 128, 100); /* cor do botão */
+    border: none; /* sem borda */
+    color: white; /* texto branco */
+    padding: 0.5rem 1rem; /* tamanho */
+    border-radius: 4px; /* arredondado */
+    cursor: pointer; /* mãozinha */
+}
+
+/* Seção de contato */
+#contato {
+    text-align: center; /* centraliza tudo */
+    margin-top: 2rem; /* espaço acima */
+}
+
+/* Links de redes sociais */
+.redes-sociais a {
+    background-color: rgb(0, 128, 100); /* fundo */
+    color: white; /* texto */
+    display: inline-block; /* permite padding */
+    padding: 0.5rem 1rem; /* tamanho */
+    border-radius: 8px; /* arredondado */
+    text-decoration: none; /* sem sublinhado */
+    margin: 0.5rem; /* espaço entre botões */
+}
+
+/* Rodapé */
+footer {
+    text-align: center; /* centraliza texto */
+    padding: 1rem 0; /* espaço interno */
+    background-color: #333; /* fundo escuro */
+    color: white; /* texto branco */
+}
+
+/* Responsividade (tela maior que 768px) */
+@media (min-width: 768px) {
+    main {
+        width: 60%; /* diminui largura pra centralizar melhor */
+    }
+
+    .categoria {
+        display: grid; /* ativa grid */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* organiza em colunas */
+        gap: 1rem; /* espaço entre itens */
+    }
+}
+
+/* Centraliza título 1 */
+#titulo1 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Centraliza título 2 */
+#titulo2 {
+    width: 100%;
+    text-align: center;
+}
