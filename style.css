@@ -1,221 +1,180 @@
-/* Estilo geral da página inteira */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do site */
-    margin: 0; /* remove margem padrão do navegador */
-    padding: 0; /* remove espaçamento interno padrão */
-    background-color: rgb(247, 255, 253); /* cor de fundo da página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 255, 253);
 }
 
-/* Cabeçalho (barra de cima) */
 header {
-    background-color: #9ed3c1; /* cor de fundo */
-    color: #fff; /* cor do texto */
-    text-align: center; /* centraliza texto */
-    padding: 0.4rem 0; /* espaço em cima e embaixo */
+    background-color: #9ed3c1;
+    color: #fff;
+    text-align: center;
+    padding: 0.4rem 0;
 }
 
-/* Banner com imagem de fundo */
 .banner {
     background-size: cover;
     background-position: center;
     height: 300px;
-
-    position: fixed; /* FIXA NO TOPO */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
     color: black;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-    transition: all 0.3s ease; /* ANIMAÇÃO */
+    transition: all 0.3s ease;
 }
 
 .banner.pequeno {
     height: 120px;
 }
 
-/* Conteúdo dentro do banner */
 .banner-content {
-    width: 80%; /* largura do conteúdo dentro do banner */
+    width: 80%;
 }
 
-/* Título principal do banner */
 .banner h1 {
-    font-size: 3rem; /* tamanho grande */
-    margin-bottom: 1rem; /* espaço abaixo */
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-/* Texto abaixo do título */
 .banner p {
-    font-size: 1.2rem; /* tamanho médio */
-    margin-bottom: 1rem; /* espaço abaixo */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
-/* Links do menu */
 nav a {
-    color: white; /* cor do texto */
-    text-decoration: none; /* remove sublinhado */
-    margin: 0.1rem; /* espaço entre links */
-    padding: 0.5rem 1rem; /* tamanho do botão */
-    border-radius: 8px; /* borda arredondada */
-    background-color: rgb(0, 128, 100); /* fundo branco */
+    color: white;
+    text-decoration: none;
+    margin: 0.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: rgb(0, 128, 100);
 }
 
-/* Efeito ao passar o mouse */
 nav a:hover {
-    background-color: rgb(44, 71, 66); /* muda cor ao passar mouse */
+    background-color: rgb(44, 71, 66);
 }
 
-/* Área principal do site */
 main {
     width: 80%;
-    margin: 320px auto 2rem auto; /* espaço pro banner fixo */
+    margin: 320px auto 2rem auto;
 }
 
-/* Cada categoria (serviços, etc) */
 .categoria {
-    margin-bottom: 2rem; /* espaço entre seções */
-}
-
-/* Define largura total */
-.categoria {
+    margin-bottom: 2rem;
     width: 100%;
 }
 
-/* Título da categoria */
 .categoria h2 {
-    width: 100%; /* ocupa toda a linha */
-    text-align: center; /* centraliza texto */
-    margin-bottom: 20px; /* espaço abaixo */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Card de cada serviço */
 .produto {
-    background-color: #aee0d8; /* fundo branco */
-    border-radius: 60px; /* borda arredondada */
-    padding: 1rem; /* espaço interno */
-    margin-bottom: 1rem; /* espaço entre cards */
-    align-items: center; /* centraliza horizontal */
-    text-align: center; /* centraliza texto */
-    display: flex;
-    flex-direction: column;
+    background-color: #aee0d8;
+    border-radius: 60px;
+    padding: 1rem;
+    margin-bottom: 1rem;
     align-items: center;
+    text-align: center;
+    display: inline;
+    flex-direction: column;
 }
 
-/* Imagem do produto */
 .produto img {
-    max-width: 100%; /* não passa do tamanho do card */
-    height: auto; /* mantém proporção */
-    border-radius: 8px; /* borda arredondada */
-    margin-bottom: 1rem; /* espaço abaixo */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
-/* Preço */
 .preco {
-    font-weight: bold; /* deixa em negrito */
-    color: #374945; /* cor do preço */
-    margin-bottom: 1rem; /* espaço abaixo */
+    font-weight: bold;
+    color: #374945;
+    margin-bottom: 1rem;
 }
 
-/* Check adicionar */
 .adicionar {
-
-    cursor: pointer; /* vira mãozinha */
+    cursor: pointer;
     transform: scale(1.5);
     transform-origin: top left;
     margin: 10px;
-    cursor: pointer;
     position: relative;
 }
 
-/* Área de pedidos/orçamento */
 #pedidos {
-    background-color: rgb(187, 216, 202); /* fundo verde claro */
-    padding: 1rem; /* espaço interno */
-    border-radius: 50px; /* borda arredondada */
+    background-color: rgb(187, 216, 202);
+    padding: 1rem;
+    border-radius: 50px;
 }
 
-/* Lista de pedidos */
 #lista-pedido {
     list-style: none;
-    padding: 0; /* remove espaço interno */
+    padding: 0;
 }
 
-/* Botão finalizar */
 #finalizar-pedido {
-    background-color: rgb(0, 128, 100); /* cor do botão */
-    border: none; /* sem borda */
-    color: white; /* texto branco */
-    padding: 0.5rem 1rem; /* tamanho */
-    border-radius: 40px; /* arredondado */
-    cursor: pointer; /* mãozinha */
+    background-color: rgb(0, 128, 100);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 #finalizar-pedido:hover {
     background-color: rgb(44, 71, 66);
 }
 
-/* Seção de contato */
 #contato {
-    text-align: center; /* centraliza tudo */
-    margin-top: 2rem; /* espaço acima */
+    text-align: center;
+    margin-top: 2rem;
 }
 
-/* Links de redes sociais */
 .redes-sociais a {
-    background-color: rgb(0, 128, 100); /* fundo */
-    color: white; /* texto */
-    display: inline-block; /* permite padding */
-    padding: 0.5rem 1rem; /* tamanho */
-    border-radius: 8px; /* arredondado */
-    text-decoration: none; /* sem sublinhado */
-    margin: 0.5rem; /* espaço entre botões */
+    background-color: rgb(0, 128, 100);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0.5rem;
 }
 
 .redes-sociais a:hover {
     background-color: rgb(44, 71, 66);
 }
 
-/* Rodapé */
 footer {
-    text-align: center; /* centraliza texto */
-    padding: 1rem 0; /* espaço interno */
-    background-color: rgb(44, 71, 66); /* fundo escuro */
-    color: white; /* texto branco */
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgb(44, 71, 66);
+    color: white;
 }
 
-/* Responsividade (tela maior que 768px) */
 @media (min-width: 768px) {
     main {
-        width: 60%; /* diminui largura pra centralizar melhor */
+        width: 60%;
     }
 
     .categoria {
-        display: grid; /* ativa grid */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* organiza em colunas */
-        gap: 1rem; /* espaço entre itens */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
     }
 }
 
-/* Centraliza título 1 */
-#titulo1 {
+#titulo1, #titulo2 {
     width: 100%;
     text-align: center;
 }
 
-/* Centraliza título 2 */
-#titulo2 {
-    width: 100%;
-    text-align: center;
-}
-
-/* Ajustes quando o banner encolhe */
 .banner.pequeno h1 {
     font-size: 1.5rem;
 }
@@ -224,13 +183,11 @@ footer {
     font-size: 0.8rem;
 }
 
-/* suaviza a transição do texto */
 .banner h1,
 .banner p {
     transition: all 0.3s ease;
 }
 
-/* opcional: deixa o menu mais compacto */
 .banner.pequeno nav a {
     padding: 0.3rem 0.6rem;
     font-size: 0.8rem;
